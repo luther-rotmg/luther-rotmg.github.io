@@ -1,0 +1,9 @@
+node_modules/
+test-results/
+playwright-report/
+worker/
+.dev.vars
+
+# Planning docs + PII-guard test stay local (contain real-name blocklist) — never publish
+docs/
+tests/dox.test.js

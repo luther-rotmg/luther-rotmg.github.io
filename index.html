@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>luther — developer &amp; reverse engineer</title>
+<meta name="description" content="luther — developer and reverse engineer. Builds live web tools (Tincture, APK Inspector, Packet Visualizer), shipped a 5M+ download Android ROM, and reverse-engineers game clients down to the network protocol.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="luther — developer &amp; reverse engineer">
+<meta property="og:description" content="Developer and reverse engineer. Live web tools, a 5M+ download Android ROM, and game-client reverse engineering.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://luther-rotmg.github.io/assets/img/og.png">
+<meta property="og:url" content="https://luther-rotmg.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/Fraunces-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="seal">L</span>luther</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">work</a>
+      <a href="#skills">skills</a>
+      <a href="#lab">live</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+      <a href="https://github.com/luther-rotmg" class="gh" target="_blank" rel="noopener">github ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-label="Intro">
+    <div class="wrap">
+      <p class="kicker">Developer &amp; reverse engineer <b>·</b> remote</p>
+      <h1>luther<span class="dot">.</span></h1>
+      <svg class="underline" viewBox="0 0 360 14" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M2 8C60 3 120 11 180 6.5C240 2 300 10 358 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <p class="creed">I build software <span class="amp">&amp;</span> then take it apart to see how it works.</p>
+      <p class="sub">Self-driven developer who likes to go one layer deeper than strictly necessary. I've <b>shipped to millions</b>, <b>founded a platform from scratch</b>, and <b>reverse-engineered game clients down to the network protocol</b>.</p>
+      <div class="cta">
+        <a href="#work" class="btn primary">See the work</a>
+        <a href="https://tincturepoe2.com" class="btn" target="_blank" rel="noopener">Latest: Tincture <span class="arr">↗</span></a>
+        <a href="#contact" class="btn">Contact <span class="arr">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" aria-label="Selected work">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="marker"><span class="no">No. 01</span> Selected work <span class="ln"></span></div>
+        <h2 class="sec-title">Things I've built &amp; broken</h2>
+        <p class="sec-note">A mix of shipped products, from-scratch web tools, and low-level reverse engineering. Most of the tools below are live — open them.</p>
+      </div>
+
+      <article class="proj reveal">
+        <div class="proj-no">01</div>
+        <div class="proj-aside">
+          <h3>Tincture <span class="live-pill">Live</span></h3>
+          <div class="role">Solo build · 2026 · tincturepoe2.com</div>
+          <div class="stat">
+            <div class="num">124k+</div>
+            <div class="lbl">ladder characters · distilled hourly</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <p>A live <span class="em">Path of Exile 2</span> build-meta tool. Every hour it reads the top of the ladder through poe.ninja, distills thousands of characters into a ranked list across every league variant (Softcore, Hardcore, SSF, HC&nbsp;SSF, Standard), and lets you <span class="em">Decant</span> a build straight into the game's Build Planner folder in one click — via the File System Access API, with no backend and no tracking.</p>
+          <p>The pipeline is stdlib-only Python on an hourly GitHub Action that fails safe; the front end is a single hand-built page on its own domain.</p>
+          <a class="proj-link" href="https://tincturepoe2.com" target="_blank" rel="noopener">Open Tincture <span>&rarr;</span></a>
+          <div class="tags">
+            <span class="tag">Path of Exile 2</span>
+            <span class="tag">poe.ninja API</span>
+            <span class="tag">File System Access API</span>
+            <span class="tag">Python</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">static site</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-no">02</div>
+        <div class="proj-aside">
+          <h3>Custom Android ROM</h3>
+          <div class="role">Android ROM · XDA Developers</div>
+          <div class="stat">
+            <div class="num">5,000,000+</div>
+            <div class="lbl">downloads</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <p>Contributed to a custom ROM based on Android 4.0 (Ice Cream Sandwich), working at the bytecode level — decompiling system APKs to smali, then patching and recompiling the framework to add features and tune performance. Released through XDA Developers, where one ROM I worked on passed <span class="em">five million downloads</span>.</p>
+          <div class="tags">
+            <span class="tag">smali / baksmali</span>
+            <span class="tag">APKTool</span>
+            <span class="tag">Android framework</span>
+            <span class="tag">custom recovery</span>
+            <span class="tag">Java</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-no">03</div>
+        <div class="proj-aside">
+          <h3>APK Inspector</h3>
+          <div class="role">Solo build · live in-browser tool</div>
+        </div>
+        <div class="proj-body">
+          <p>A browser tool that takes apart any Android app package — decoding the manifest, permissions, components, and signing scheme entirely client-side, with nothing uploaded. The core is a parser I wrote from scratch for Android's compiled binary XML format (string pool, resource map, typed values), validated byte-for-byte against an independent implementation.</p>
+          <a class="proj-link" href="https://luther-rotmg.github.io/apk-inspector" target="_blank" rel="noopener">Open the live tool <span>&rarr;</span></a>
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">binary XML parser</span>
+            <span class="tag">reverse engineering</span>
+            <span class="tag">JSZip</span>
+            <span class="tag">zero-upload / client-side</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-no">04</div>
+        <div class="proj-aside">
+          <h3>Packet Visualizer</h3>
+          <div class="role">Solo build · live in-browser tool</div>
+        </div>
+        <div class="proj-body">
+          <p>A browser-based network-capture analyzer — drop in a .pcap or .pcapng and it shows a protocol breakdown, the conversations between hosts, and a full packet list. I wrote the parser for both capture formats from scratch, plus the dissection up the stack: Ethernet, IPv4/IPv6, TCP, UDP, ICMP, and ARP.</p>
+          <a class="proj-link" href="https://luther-rotmg.github.io/packet-visualizer" target="_blank" rel="noopener">Open the live tool <span>&rarr;</span></a>
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">pcap / pcapng</span>
+            <span class="tag">network protocols</span>
+            <span class="tag">binary parsing</span>
+            <span class="tag">zero-upload / client-side</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-no">05</div>
+        <div class="proj-aside">
+          <h3>APK Security Scanner</h3>
+          <div class="role">Solo build · live in-browser tool</div>
+        </div>
+        <div class="proj-body">
+          <p>A static security scanner for Android apps. Drop in an APK and it grades the app A–F — flagging risky manifest config (debuggable builds, exported components), sweeping the contents for hardcoded API keys and secrets, and checking signing weaknesses. Built on the same from-scratch manifest parser as APK Inspector, fully client-side.</p>
+          <a class="proj-link" href="https://luther-rotmg.github.io/apk-security-scanner" target="_blank" rel="noopener">Open the live tool <span>&rarr;</span></a>
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">mobile security</span>
+            <span class="tag">static analysis</span>
+            <span class="tag">secret detection</span>
+            <span class="tag">zero-upload / client-side</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-no">06</div>
+        <div class="proj-aside">
+          <h3>Online-game community platform</h3>
+          <div class="role">Co-founder &amp; developer · e-commerce + game tooling</div>
+        </div>
+        <div class="proj-body">
+          <p>Co-founded and built an e-commerce platform for an online-game community — the storefront, an automated instant order-delivery pipeline, and the support tooling that kept it running. Going lower-level, I reverse-engineered the game's client and network protocol to build free community tools — a custom client and a real-time event notifier.</p>
+          <div class="tags">
+            <span class="tag">full-stack web</span>
+            <span class="tag">reverse engineering</span>
+            <span class="tag">network protocol</span>
+            <span class="tag">C#</span>
+            <span class="tag">automated fulfillment</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-no">07</div>
+        <div class="proj-aside">
+          <h3>Production web platform</h3>
+          <div class="role">Web developer · 2017 – present</div>
+        </div>
+        <div class="proj-body">
+          <p>Build and maintain a production website end to end — feature development, user-acceptance testing, and troubleshooting through root-cause analysis to keep the platform stable and on-spec.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Ruby on Rails</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-no">08</div>
+        <div class="proj-aside">
+          <h3>Embedded Systems</h3>
+          <div class="role">IT specialist · aerospace</div>
+        </div>
+        <div class="proj-body">
+          <p>Deployed and maintained embedded systems and repaired hardware following strict technical procedures — then translated the deep technical detail into plain language for the people actually using the devices.</p>
+          <div class="tags">
+            <span class="tag">embedded systems</span>
+            <span class="tag">hardware repair</span>
+            <span class="tag">technical support</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" aria-label="Skills">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="marker"><span class="no">No. 02</span> Capabilities <span class="ln"></span></div>
+        <h2 class="sec-title">What I work with</h2>
+      </div>
+      <div class="skills reveal">
+        <div class="skill-row"><h4>Languages</h4><div class="items">JavaScript <span>·</span> Ruby <span>·</span> C# <span>·</span> Python <span>·</span> HTML <span>·</span> CSS <span>·</span> smali</div></div>
+        <div class="skill-row"><h4>Web</h4><div class="items">Ruby on Rails <span>·</span> REST APIs <span>·</span> responsive UI <span>·</span> static sites <span>·</span> e-commerce systems</div></div>
+        <div class="skill-row"><h4>Reverse eng.</h4><div class="items">disassembly <span>·</span> bytecode patching <span>·</span> protocol analysis <span>·</span> binary formats <span>·</span> Android internals</div></div>
+        <div class="skill-row"><h4>Tooling</h4><div class="items">Git / GitHub <span>·</span> GitHub Actions <span>·</span> Linux <span>·</span> VMware <span>·</span> VS&nbsp;Code</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAB / LIVE DEMO -->
+  <section id="lab" aria-label="Live demo">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="marker"><span class="no">No. 03</span> Live <span class="ln"></span></div>
+        <h2 class="sec-title">Paste code, watch it get read</h2>
+        <p class="sec-note">A small thing I built — pick a sample and it gets marked up the way I'd review it, or paste your own. Runs in your browser; nothing stored.</p>
+      </div>
+      <div class="demo-box reveal" data-demo>
+        <div class="demo-tabs" role="tablist" aria-label="Code samples"></div>
+        <div class="demo-paste" hidden>
+          <label class="demo-paste-label" for="demo-code">Your code (≤ 150 lines)</label>
+          <textarea id="demo-code" class="demo-textarea" spellcheck="false" placeholder="paste a function, a file, a diff…"></textarea>
+          <div class="demo-paste-actions">
+            <button type="button" class="btn primary demo-review-btn">Review it →</button>
+            <span class="demo-status" role="status" aria-live="polite"></span>
+          </div>
+          <p class="demo-privacy">Your code is sent to an AI for review and not stored.</p>
+        </div>
+        <div class="demo-summary" data-demo-summary></div>
+        <div class="demo-output" data-demo-output></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" aria-label="About">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="marker"><span class="no">No. 04</span> About <span class="ln"></span></div>
+        <h2 class="sec-title">A little background</h2>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-body">
+          <p class="lead">Building <span class="amp">&amp;</span> breaking are the same skill to me — both come down to understanding a system completely.</p>
+          <p>I'm a self-driven developer with a habit of going one layer deeper than I strictly need to. I've shipped a custom Android ROM that passed five million downloads, co-founded and built an e-commerce platform from the database up, and reverse-engineered game clients down to their network protocols.</p>
+          <p class="q">I'm comfortable across the stack and below it, I move fast, and I ship more in less time — Tincture went from idea to a live tool on its own domain in a single sprint.</p>
+        </div>
+        <div class="about-side">
+          <div class="row"><span class="k">Based in</span><span class="v">US · remote-friendly</span></div>
+          <div class="row"><span class="k">Focus</span><span class="v">Web development</span></div>
+          <div class="row"><span class="k">Also</span><span class="v">Reverse engineering · IT</span></div>
+          <div class="row"><span class="k">Status</span><span class="v">Open to opportunities</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" aria-label="Contact">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="marker"><span class="no">No. 05</span> Contact <span class="ln"></span></div>
+        <div class="big">Let's build <span class="it">something</span>.</div>
+        <p class="intro">Open to interesting problems and good collaborations. Drop a note below — no email needed.</p>
+      </div>
+      <form class="contact-form reveal" novalidate>
+        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="field"><label for="cf-name">Name / handle</label><input id="cf-name" name="name" type="text" required></div>
+        <div class="field"><label for="cf-email">Email or Discord</label><input id="cf-email" name="email" type="text" required></div>
+        <div class="field"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="4" required></textarea></div>
+        <div class="form-actions"><button type="submit" class="btn primary">Send →</button><span class="form-status" role="status" aria-live="polite"></span></div>
+      </form>
+      <div class="links reveal">
+        <a class="link-row" href="https://github.com/luther-rotmg" target="_blank" rel="noopener">
+          <span class="lk">github</span>
+          <span class="lv">github.com/luther-rotmg <span class="arr">↗</span></span>
+        </a>
+        <a class="link-row" href="https://tincturepoe2.com" target="_blank" rel="noopener">
+          <span class="lk">latest project</span>
+          <span class="lv">tincturepoe2.com <span class="arr">↗</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© 2026 luther</span>
+    <span class="colophon"><span class="seal" aria-hidden="true">L</span><span>Set in <b>Fraunces</b> &amp; IBM&nbsp;Plex · built by hand, <span class="accent">no template</span></span></span>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
